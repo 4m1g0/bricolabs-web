@@ -24,6 +24,11 @@ section.intro {
     margin: 150px 0px 0px 0px;
 }
 
+.logo_mini {
+    float: left;
+    margin: 3px 0 0 40px;
+}
+
 #main_menu li {
     display: inline;
     padding: 0 10px;
@@ -51,4 +56,14 @@ header {
     top: 0px;
     left: 0px;
     width: 100%;
+}
+
+.header_background {
+    background-color: white;
+    display: none;
+    border-bottom: solid 1px;;
+}
+
+.header_background #main_menu li a {
+    color: #000;
 }
