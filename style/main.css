@@ -87,6 +87,18 @@ header {
     clear: both;
 }
 
+#video_bricolabs{
+    width: 100%;
+    min-height: 500px;
+    margin-top: -300px;
+    left: 50%;
+    overflow: hidden;
+}
+
+section.video {
+    height: 500px;
+    overflow: hidden;
+}
 
 @media screen and (max-width: 600px) {
     #logo {
@@ -98,6 +110,10 @@ header {
        width: 100%;
        float: none;
      }
+     
+     #video_bricolabs{
+        display: none;
+    }
      
     .content {
         margin: 50px auto 0 auto;
