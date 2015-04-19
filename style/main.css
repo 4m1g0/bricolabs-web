@@ -67,3 +67,22 @@ header {
 .header_background #main_menu li a {
     color: #000;
 }
+
+.content {
+    margin: 70px auto 20px auto;
+    max-width: 1400px;
+    width: 90%;
+}
+
+.desc_image {
+    float:left;
+    margin-right: 90px;
+    margin-bottom: 50px;
+    -webkit-box-shadow: 3px 4px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 4px 20px 0px rgba(0,0,0,0.75);
+}
+
+.nofloat {
+    clear: both;
+}
