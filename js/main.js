@@ -16,5 +16,7 @@ function scroll (){
             header.fadeOut();
             menuVisible = false;
        }
+       $("#logo").css("margin-top", 150 + $(window).scrollTop()/1.5);
+       $(".intro").css("background-position", "center "+($(window).scrollTop()/1.2) + "px");
     }
 }
