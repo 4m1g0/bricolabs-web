@@ -1,28 +1,34 @@
 $(function(){
-    menuVisible = false;
+    intro = $("#intro-bg");
+    introHeight = intro.height();
+    logo = $("#logo");
+    logoMini = $(".logo-mini");
+    mainMenu = $("#main-menu");
+    video = $("#video-bricolabs");
     $(window).scroll(scroll);
+    $(window).resize(resize);
 });
 
-function scroll (){
-    var mywindow = $(window);
-    var headerHeight = 70;
-    if (mywindow.scrollTop() > $(".intro").outerHeight() - headerHeight) {
-        if (!menuVisible) {
-            $(".header_background").fadeIn();
-            menuVisible = true;
-       }
+function scroll() {
+    var scrollTop = $(window).scrollTop();
+    console.log("scroll: " + scrollTop);
+    var scrollMod = scrollTop/7;
+    intro.css({"transform": "translateY(" + -scrollMod + "px)"});
+    logo.css({"transform": "translateY(" + -scrollMod + "px)",
+              "opacity": 1-scrollMod/32});
+              
+    if (scrollTop > introHeight) {
+        logoMini.fadeIn();
+        mainMenu.addClass("menu-dark");
     } else {
-        if (menuVisible) {
-            $(".header_background").fadeOut();
-            menuVisible = false;
-       }
-        $("#logo").css("margin-top", 150 + mywindow.scrollTop()/1.5);
-        $(".intro").css("background-position", "center "+(mywindow.scrollTop()/1.2) + "px");
+        logoMini.hide();
+        mainMenu.removeClass("menu-dark");
     }
+    video.css({"margin-top": -200-scrollMod + "px"});
+    
+}
 
-    var video = $("#video_bricolabs");
-    if (mywindow.scrollTop() + mywindow.height() > video.position().top){
-        console.log("hola")
-        video.css("margin-top", -600 + ((mywindow.scrollTop() + mywindow.height() - video.position().top)/2) + "px");
-    }
+function resize() {
+    console.log("resize");
+    introHeight = intro.height();
 }

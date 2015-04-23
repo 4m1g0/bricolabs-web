@@ -8,46 +8,32 @@ html, body {
     font-family: sans-serif;
 }
 
-section.intro {
+.intro {
+    width: 100%;
     height: 100%;
-    max-height:800px;
-    background: url("../images/BricolabsWide2.jpg") no-repeat;
+    max-height:517px;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    top: 0;
+}
+
+.intro-bg {
+    height: 100%;
+    width: 100%;
+    background: url(../images/BricolabsWide-1200.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
-    text-align: center;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    position: absolute;
+    box-sizing: border-box;
 }
 
-#logo {
-    margin: 150px 0px 0px 0px;
-}
-
-.logo_mini {
-    float: left;
-    margin: 3px 0 0 40px;
-}
-
-#main_menu li {
-    display: inline;
-    padding: 0 10px;
-    line-height: 70px;
-    font-family: sans-serif;
-}
-
-#main_menu li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-#main_menu li a:hover {
-    text-decoration: underline;
-}
-
-#main_menu {
-    float: right;
-    margin-right: 40px;
+.intro-placeholder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height:517px;
 }
 
 header {
@@ -56,60 +42,114 @@ header {
     top: 0px;
     left: 0px;
     width: 100%;
+    z-index: 900;"
 }
 
-.header_background {
-    background-color: white;
+#main-menu li {
+    display: inline;
+    padding: 0 10px;
+    line-height: 70px;
+    font-family: sans-serif;
+}
+#main-menu {
+    color: #fff;
+}
+
+.menu-dark {
+    color: #000 !important;
+    background-color: #fff;
+}
+
+#main-menu a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#main-menu a:hover {
+    text-decoration: underline;
+}
+
+#main-menu nav {
+    float: right;
+    margin-right: 40px;
+}
+
+#logo {
+    position: relative;
+    margin-top: 70px;
+}
+
+.logo-mini {
     display: none;
-    border-bottom: solid 1px;;
+    margin: 3px 0 0 40px;
 }
 
-.header_background #main_menu li a {
-    color: #000;
-}
-
-.content {
-    margin: 70px auto 20px auto;
+.desc-wrapper {
+    display: table;
+    margin: 0 auto;
     max-width: 1400px;
     width: 90%;
 }
 
-.desc_image {
-    float:left;
+.desc-image {
+    display: table-cell;
     margin-right: 90px;
-    margin-bottom: 50px;
     -webkit-box-shadow: 3px 4px 20px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 4px 20px 0px rgba(0,0,0,0.75);
     box-shadow: 3px 4px 20px 0px rgba(0,0,0,0.75);
 }
 
-.nofloat {
+.desc-text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.desc-wraper:after {
+    content: "\0020";
     clear: both;
 }
 
-#video_bricolabs{
+#video-bricolabs{
     width: 100%;
     min-height: 500px;
-    margin-top: -300px;
+    margin-top: -200px;
     left: 50%;
     overflow: hidden;
 }
 
-section.video {
-    height: 500px;
+.video {
+    position: relative;
+    height: 450px;
     overflow: hidden;
+    background: url(images/) no-repeat;
 }
 
 .twitter {
-    float: left;
+    display: inline;
 }
 
 .facebook {
+    display: inline;
+    background-color: #00f;
+    height: 350px;
+    width: 350px;
     float: right;
 }
 
-.media .content {
-    max-width: 1000px;
+.media-wrapper {
+    margin: 0 auto;
+    height: 354px;
+    width: 80%;
+    
+}
+
+.content {
+    background-color: #645B5B;
+    position: relative;
+    z-index: 100;
+    padding: 70px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
 @media screen and (max-width: 600px) {
@@ -117,17 +157,20 @@ section.video {
         width: 90%;
         height: auto;
     }
-    
-    .desc_image {
-       width: 100%;
-       float: none;
-     }
      
-     #video_bricolabs{
+     #video-bricolabs{
         display: none;
     }
+}
+
+@media screen and (max-width: 950px) {
+    .desc-image {
+       width: 100%;
+       display: block;
+       margin-bottom: 40px;
+     }
      
-    .content {
-        margin: 50px auto 0 auto;
-    }
+     .desc-text {
+         display:block;
+     }
 }
