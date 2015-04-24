@@ -1,12 +1,12 @@
 $(function(){
     intro = $("#intro-bg");
-    introHeight = intro.height();
     logo = $("#logo");
     logoMini = $(".logo-mini");
     mainMenu = $("#main-menu");
-    video = $("#video-bricolabs");
+    video = false;
     $(window).scroll(scroll);
     $(window).resize(resize);
+    resize();
 });
 
 function scroll() {
@@ -24,11 +24,23 @@ function scroll() {
         logoMini.hide();
         mainMenu.removeClass("menu-dark");
     }
-    video.css({"margin-top": -200-scrollMod + "px"});
+    if (video != false){
+        video.css({"transform": "translateY(" + -scrollMod + "px)"});
+    }
+
     
 }
 
 function resize() {
     console.log("resize");
+    if (!video && $(window).width() > 900){
+        video = $('<video id="video-bricolabs" autoplay loop preload="auto"><source src="images/bricolabs_video.mp4" type="video/mp4"><source src="images/bricolabs_video.mp4" type="video/ogg"></video>').appendTo($(".video"));
+        //video = $("#video");
+    }
+    
+    if (video != false) {
+        videoHeight = video.height();
+    }
     introHeight = intro.height();
+    windowHeight = $(window).height();
 }

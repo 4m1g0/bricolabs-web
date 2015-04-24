@@ -21,8 +21,7 @@ html, body {
 .intro-bg {
     height: 100%;
     width: 100%;
-    background: url(../images/BricolabsWide-1200.jpg) no-repeat;
-    background-position: center center;
+    background: url(../images/BricolabsWide-1200.jpg) no-repeat center center;
     background-size: cover;
     overflow: hidden;
     position: absolute;
@@ -77,6 +76,9 @@ header {
 #logo {
     position: relative;
     margin-top: 70px;
+    width: auto;
+    height: 70%;
+    max-height: 396px;
 }
 
 .logo-mini {
@@ -111,8 +113,8 @@ header {
 
 #video-bricolabs{
     width: 100%;
-    min-height: 500px;
-    margin-top: -200px;
+    min-height: 100%;
+    /*margin-top: -300px;*/
     left: 50%;
     overflow: hidden;
 }
@@ -121,26 +123,26 @@ header {
     position: relative;
     height: 450px;
     overflow: hidden;
-    background: url(images/) no-repeat;
+    background: url() no-repeat;
 }
 
 .twitter {
-    display: inline;
+    display: table-cell;
 }
 
 .facebook {
-    display: inline;
     background-color: #00f;
     height: 350px;
     width: 350px;
-    float: right;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .media-wrapper {
+    display: table;
     margin: 0 auto;
     height: 354px;
-    width: 80%;
-    
+    width: 800px;
 }
 
 .content {
@@ -152,18 +154,7 @@ header {
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
-@media screen and (max-width: 600px) {
-    #logo {
-        width: 90%;
-        height: auto;
-    }
-     
-     #video-bricolabs{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 900px) {
     .desc-image {
        width: 100%;
        display: block;
@@ -173,4 +164,64 @@ header {
      .desc-text {
          display:block;
      }
+     
+     .media-wrapper {
+         width: 350px;
+         height: 700px;
+     }
+     
+     .twitter {
+         display: block;
+     }
+     
+     .facebook {
+         display: block;
+     }
+         
+     #video-bricolabs{
+        display: none;
+     }
+}
+
+@media screen and (max-width: 320px) {
+    .intro-bg {
+        background: url(../images/BricolabsWide-320.jpg) no-repeat;
+    }
+    
+    .intro-placeholder, .intro, .intro-bg {
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 321px){
+    .intro-bg {
+        background: url(../images/BricolabsWide-768.jpg) no-repeat;
+    }
+    
+    .intro-placeholder, .intro, .intro-bg {
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px){
+    .intro-bg {
+        background: url(../images/BricolabsWide-1024.jpg) no-repeat;
+    }
+    
+    .intro-placeholder, .intro, .intro-bg {
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1025px){
+    .intro-bg {
+        background: url(../images/BricolabsWide-1200.jpg) no-repeat center center;
+    }
+}
+
+@media screen and (min-width: 1201px){
+    .intro-bg {
+        background: url(../images/BricolabsWide-1600.jpg) no-repeat center center;
+        background-size: cover;
+    }
 }
