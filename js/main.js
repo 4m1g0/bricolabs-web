@@ -3,6 +3,8 @@ $(function(){
     logo = $("#logo");
     logoMini = $(".logo-mini");
     mainMenu = $("#main-menu");
+    menubg = $(".menu-bg");
+    protobg = $(".proto-bg");
     video = false;
     $(window).scroll(scroll);
     $(window).resize(resize);
@@ -19,16 +21,20 @@ function scroll() {
               
     if (scrollTop > introHeight) {
         logoMini.fadeIn();
+        menubg.fadeIn();
         mainMenu.addClass("menu-dark");
     } else {
-        logoMini.hide();
+        logoMini.fadeOut();
+        menubg.fadeOut();
         mainMenu.removeClass("menu-dark");
     }
-    if (video != false){
+    if (video != false && windowWidth > 900){
         video.css({"transform": "translateY(" + -scrollMod + "px)"});
     }
-
     
+    if (scrollTop + windowHeight > protoTop) {
+       protobg.css({"transform": "translateY(" + ((-windowHeight+(scrollTop+windowHeight-protoTop))/3) + "px)"});
+    }
 }
 
 function resize() {
@@ -43,4 +49,7 @@ function resize() {
     }
     introHeight = intro.height();
     windowHeight = $(window).height();
+    windowWidth = $(window).width();
+    protoTop = $(".proto").position().top;
+    protoHeight = $(".proto").height();
 }

@@ -25,7 +25,6 @@ html, body {
     background-size: cover;
     overflow: hidden;
     position: absolute;
-    box-sizing: border-box;
 }
 
 .intro-placeholder {
@@ -41,7 +40,18 @@ header {
     top: 0px;
     left: 0px;
     width: 100%;
-    z-index: 900;"
+    z-index: 900;
+}
+
+.menu-bg {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    background-color: #f4f4f4;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 #main-menu li {
@@ -56,7 +66,7 @@ header {
 
 .menu-dark {
     color: #000 !important;
-    background-color: #fff;
+    border-bottom: solid 1px;
 }
 
 #main-menu a {
@@ -114,16 +124,12 @@ header {
 #video-bricolabs{
     width: 100%;
     min-height: 100%;
-    /*margin-top: -300px;*/
-    left: 50%;
     overflow: hidden;
 }
 
 .video {
     position: relative;
-    height: 450px;
     overflow: hidden;
-    background: url() no-repeat;
 }
 
 .twitter {
@@ -152,6 +158,28 @@ header {
     padding: 70px 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.proto-bg {
+    width: 100%;
+    position: relative;
+}
+
+.proto {
+    width: 100%;
+    overflow: hidden;
+}
+
+.proyects {
+    height: 350px;
+    width: 100%; 
+}
+
+footer {
+    height: 260px;
+    width: 100%;
+    background-color: #ccf;
+    position: relative;
 }
 
 @media screen and (max-width: 900px) {
@@ -185,31 +213,70 @@ header {
 
 @media screen and (max-width: 320px) {
     .intro-bg {
-        background: url(../images/BricolabsWide-320.jpg) no-repeat;
+        background: url(../images/BricolabsWide-320.jpg) no-repeat center center;
     }
     
     .intro-placeholder, .intro, .intro-bg {
         max-height: 200px;
     }
+    
+    .video, .proto {
+        height: 250px;
+    }
+    
+    .video {
+        background: url(../images/bricolabs-taller-320.jpg) no-repeat center center;
+    }
+    
+    .proto-bg {
+        background: url(../images/bricolabs-proto-320.jpg) no-repeat center bottom;
+        height: 240px;
+    }
 }
 
 @media screen and (max-width: 768px) and (min-width: 321px){
     .intro-bg {
-        background: url(../images/BricolabsWide-768.jpg) no-repeat;
+        background: url(../images/BricolabsWide-768.jpg) no-repeat center center;
     }
     
     .intro-placeholder, .intro, .intro-bg {
         max-height: 300px;
     }
+    
+    .video, .proto {
+        height: 300px;
+    }
+    
+    .video {
+        background: url(../images/bricolabs-taller-768.jpg) no-repeat center center;
+    }
+    
+    .proto-bg {
+        background: url(../images/bricolabs-proto-768.jpg) no-repeat center bottom;
+        height: 576px;
+    }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 769px){
     .intro-bg {
-        background: url(../images/BricolabsWide-1024.jpg) no-repeat;
+        background: url(../images/BricolabsWide-1024.jpg) no-repeat center center;
     }
     
     .intro-placeholder, .intro, .intro-bg {
         max-height: 400px;
+    }
+    
+    .video, .proto {
+        height: 350px;
+    }
+    
+    .video {
+        background: url(../images/bricolabs-taller-1024.jpg) no-repeat center center;
+    }
+    
+    .proto-bg {
+        background: url(../images/bricolabs-proto-1024.jpg) no-repeat center bottom;
+        height: 768px;
     }
 }
 
@@ -217,11 +284,38 @@ header {
     .intro-bg {
         background: url(../images/BricolabsWide-1200.jpg) no-repeat center center;
     }
+    
+    .video, .proto {
+        height: 400px;
+    }
+    
+    .video {
+        background: url(../images/bricolabs-taller-1200.jpg) no-repeat center center;
+    }
+    
+    .proto-bg {
+        background: url(../images/bricolabs-proto-1200.jpg) no-repeat center bottom;
+        height: 900px;
+    }
 }
 
 @media screen and (min-width: 1201px){
     .intro-bg {
         background: url(../images/BricolabsWide-1600.jpg) no-repeat center center;
         background-size: cover;
+    }
+    
+    .video, .proto {
+        height: 450px;
+    }
+    
+    .video {
+        background: url(../images/bricolabs-taller-1600.jpg) no-repeat center center;
+    }
+    
+    .proto-bg {
+        background: url(../images/bricolabs-proto-1600.jpg) no-repeat center bottom;
+        background-size: cover;
+        height: 1200px;
     }
 }
