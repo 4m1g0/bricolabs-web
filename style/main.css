@@ -54,7 +54,7 @@ header {
     z-index: -1;
 }
 
-#main-menu li {
+.menu-desktop li {
     display: inline;
     padding: 0 10px;
     line-height: 70px;
@@ -78,7 +78,7 @@ header {
     text-decoration: underline;
 }
 
-#main-menu nav {
+.menu-desktop {
     float: right;
     margin-right: 40px;
 }
@@ -114,6 +114,9 @@ header {
 .desc-text {
     display: table-cell;
     vertical-align: middle;
+    color: #fff;
+    font-size: 1.01em;
+    font-family: sans-serif;
 }
 
 .desc-wraper:after {
@@ -130,6 +133,7 @@ header {
 .video {
     position: relative;
     overflow: hidden;
+    vertical-align: middle;
 }
 
 .twitter {
@@ -182,6 +186,35 @@ footer {
     position: relative;
 }
 
+.show-menu {
+    display: none;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    background: url(../images/menu.png) no-repeat center center;
+    cursor: pointer;
+}
+
+.close-menu {
+    background: url(../images/close.png) no-repeat center center !important;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    display: none;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #000;
+}
+
+.menu-mobile li{
+    margin: 1.5em 0;
+}
+
 @media screen and (max-width: 900px) {
     .desc-image {
        width: 100%;
@@ -189,24 +222,20 @@ footer {
        margin-bottom: 40px;
      }
      
-     .desc-text {
-         display:block;
-     }
-     
      .media-wrapper {
          width: 350px;
          height: 700px;
      }
      
-     .twitter {
-         display: block;
+     .twitter, .facebook, .desc-text, .menu-bg, .logo-mini {
+         display: inline;
      }
      
-     .facebook {
-         display: block;
+     .show-menu {
+         display: inline;
      }
          
-     #video-bricolabs{
+     #video-bricolabs, .menu-desktop {
         display: none;
      }
 }
