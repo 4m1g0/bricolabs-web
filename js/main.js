@@ -17,6 +17,10 @@ $(function(){
     });
     $(".image-fullscreen").click(closeImage);
     resize();
+    $(".img-container").children("img").bind("contextmenu",function(e){
+        return false;
+       });
+
 });
 
 function scroll() {
@@ -37,15 +41,12 @@ function scroll() {
             menubg.fadeOut();
             mainMenu.removeClass("menu-dark");
         }
-        
-        
-        if (video != false){
-            video.css({"transform": "translateY(" + (-scrollMod) + "px)"});
-        } 
     }
     
-    if (scrollTop + windowHeight > protoTop) {
-       protobg.css({"transform": "translateY(" + (((scrollTop+windowHeight-protoTop)-windowHeight-protoHeight)/7) + "px)"});
+    if (windowWidth > 768 && scrollTop + windowHeight > protoTop) {
+        var initPos = windowHeight-protobgHeight+protoHeight/7;
+        var desp = scrollTop + windowHeight - protoTop;
+        protobg.css({"background-position-y": initPos-desp/7 +"px"});
     }
 }
 
@@ -56,13 +57,17 @@ function resize() {
     }
     
     if (video != false) {
-        videoHeight = video.height();
+        var videoHeight = video.height();
+        // center it depending windows size
+        video.css({"transform": "translateY(" + -(videoHeight - $(".video").height())/2 + "px)"});
+        
     }
     introHeight = intro.height();
     windowHeight = $(window).height();
     windowWidth = $(window).width();
     protoTop = $(".proto").position().top;
     protoHeight = $(".proto").height();
+    protobgHeight = $(".proto-bg").height();
 }
 
 function displayMenu() {

@@ -132,8 +132,6 @@ header {
 
 .video {
     position: relative;
-    overflow: hidden;
-    vertical-align: middle;
 }
 
 .twitter {
@@ -169,6 +167,7 @@ header {
 .proto-bg {
     width: 100%;
     position: relative;
+    background-attachment: fixed !important;
 }
 
 .proto {
@@ -209,13 +208,6 @@ header {
 .proyects-wrapper {
     max-width: 1170px;
     margin: 0 auto;
-    position: relative;
-}
-
-footer {
-    height: 260px;
-    width: 100%;
-    background-color: #ccf;
     position: relative;
 }
 
@@ -284,6 +276,20 @@ footer {
     cursor: pointer;
 }
 
+footer {
+    height: 80px;
+    width: 100%;
+    background-color: #ccf;
+    text-align: center;
+    padding-top: 30px;
+}
+
+footer img {
+    width: 35px;
+    padding: 5px;
+    display: inline;
+}
+
 @media screen and (max-width: 1170px) {
     .proyects-wrapper {
         max-width: 780px;
@@ -340,6 +346,7 @@ footer {
     
     .proto-bg {
         background: url(../images/bricolabs-proto-320.jpg) no-repeat center bottom;
+        background-attachment: scroll !important;
         height: 240px;
     }
 }
@@ -354,7 +361,7 @@ footer {
     }
     
     .video, .proto {
-        height: 300px;
+        height: 250px;
     }
     
     .video {
@@ -363,6 +370,7 @@ footer {
     
     .proto-bg {
         background: url(../images/bricolabs-proto-768.jpg) no-repeat center bottom;
+        background-attachment: scroll !important;
         height: 576px;
     }
 }
