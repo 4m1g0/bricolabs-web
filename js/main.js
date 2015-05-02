@@ -27,9 +27,17 @@ function scroll() {
     var scrollTop = $(window).scrollTop();
     console.log("scroll: " + scrollTop);
     var scrollMod = scrollTop/7;
-    intro.css({"transform": "translateY(" + -scrollMod + "px)"});
-    logo.css({"transform": "translateY(" + -scrollMod + "px)",
+              
+    if (scrollTop > introHeight) {
+        intro.hide();
+        logo.hide();
+    } else {
+        intro.show();
+        logo.show();
+        intro.css({"transform": "translateY(" + -scrollMod + "px)"});
+        logo.css({"transform": "translateY(" + -scrollMod + "px)",
               "opacity": 1-scrollMod/32});
+    }
     
     if (windowWidth > 900){
        if (scrollTop > introHeight) {
@@ -53,7 +61,7 @@ function scroll() {
 function resize() {
     console.log("resize");
     if (!video && $(window).width() > 900){
-        video = $('<video id="video-bricolabs" autoplay loop preload="auto"><source src="images/bricolabs_video.mp4" type="video/mp4"><source src="images/bricolabs_video.mp4" type="video/ogg"></video>').appendTo($(".video"));
+        video = $('<video id="video-bricolabs" autoplay loop preload="auto"><source src="images/bricolabs_video.mp4" type="video/mp4"><source src="images/bricolabs_video.ogv" type="video/ogg"></video>').appendTo($(".video"));
     }
     
     if (video != false) {
