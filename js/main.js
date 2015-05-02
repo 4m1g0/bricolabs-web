@@ -62,6 +62,12 @@ function resize() {
         video.css({"transform": "translateY(" + -(videoHeight - $(".video").height())/2 + "px)"});
         
     }
+    $(".img-description").height(function() {
+        var img = $(this).next("img");
+        img.css("top", -img.height());
+        return img.height();
+       });
+    
     introHeight = intro.height();
     windowHeight = $(window).height();
     windowWidth = $(window).width();
