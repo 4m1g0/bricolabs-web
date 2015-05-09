@@ -20,6 +20,23 @@ $(function(){
     $(".img-container").children("img").bind("contextmenu",function(e){
         return false;
        });
+       
+    $("#who").click(function(e){
+        e.preventDefault();
+        $('html,body').animate({scrollTop: $(".description").offset().top-69}, 500);
+    });
+    $("#proyects").click(function(e){
+        e.preventDefault();
+        $('html,body').animate({scrollTop: $(".proyects").offset().top-69}, 500);
+    });
+    $("#contact").click(function(e){
+        e.preventDefault();
+        $('html,body').animate({scrollTop: $(".media").offset().top-69}, 500);
+    });
+    $("#init").click(function(e){
+        e.preventDefault();
+        $('html,body').animate({scrollTop: 0}, 500);
+    });
 
 });
 
@@ -40,7 +57,7 @@ function scroll() {
     }
     
     if (windowWidth > 900){
-       if (scrollTop > introHeight) {
+       if (scrollTop > introHeight-70) {
             logoMini.fadeIn();
             menubg.fadeIn();
             mainMenu.addClass("menu-dark");
@@ -68,11 +85,6 @@ function resize() {
         video.css({"transform": "translateY(" + -(videoHeight - $(".video").height())/2 + "px)"});
         
     }
-   /* $(".img-description").height(function() {
-        var img = $(this).next("img");
-        img.css("top", -img.height());
-        return img.height();
-       });*/
     
     introHeight = intro.height();
     windowHeight = $(window).height();

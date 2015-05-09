@@ -14,6 +14,7 @@
     <script src="js/main.js"></script>
 </head>
 <body>
+<a name="init"></a>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -25,14 +26,14 @@
 <header id="main-menu" >
     <div class="menu-bg"></div>
     <div class="wrapper">
-        <a href="/"><img class="logo-mini" src="images/bricolabs_logo_mini.png" alt="Logo Bricolabs" /></a>
+        <a id="init" href="#init"><img class="logo-mini" src="images/bricolabs_logo_mini.png" alt="Logo Bricolabs" /></a>
         <div class="show-menu"></div>
         <nav class="menu">
             <ul>
-                <li><a href="wiki/"><strong>Pagina principal</strong></a></li>
-                <li><a href="wiki/index.php">Wiki</a></li>
-                <li><a href="wiki/index.php?title=quienes_somos">¿Quiénes somos?</a></li>
-                <li><a href="wiki/index.php?title=contacto">Contacto</a></li>
+                <li><a id="who" href="#who">¿Quiénes somos?</a></li>
+                <li><a id="proyects" href="#proyects">Proyectos</a></li>
+                <li><a id="contact" href="#contact">Contacto</a></li>
+                <li><a href="wiki/">Wiki</a></li>
             </ul>
         </nav>
     </div>
@@ -43,6 +44,8 @@
 </section>
 <div class="intro-placeholder cover"></div>
 <section class="description content">
+    <a name="who"></a>
+    <h1 class="section-title">¿Quiénes somos?</h1>
     <div class="wrapper table">
         <img class="desc-image" src="images/group_photo.jpg" alt="Foto de grupo Bricolabs" />
         <div class="desc-text">
@@ -56,7 +59,10 @@
         
 </section>
 <section class="proyects content">
+    <a name="proyects"></a>
+    <h1 class="section-title">Nuestros proyectos</h1>
     <div class="wrapper">
+        <div class="section-desc">Cada viernes nos reunimos para poner en común proyectos personales y desarrollar proyectos conjuntos. En estas imágenes puedes ver algunas cosas que hemos hecho. Además asistimos a numeros eventos de hardware libre y organizamos anualmente la feria de tecnología abierta OSHWDem.<br /><br />Puedes ver toda la documentación sobre nuestros proyectos en la <a href="wiki/">Wiki</a>. También puedes acceder al <a href="https://github.com/brico-labs">Github</a> de los proyectos comunes.</div>
         <div class="img-container">
             <div class="img-desc"><h1>Concurso de robots siguelíneas</h1><br />OSHWDem 2014<br /> Museo Domus de A coruña</div>
             <img src="images/siguelineas-small.jpg" alt="Concurso de robots siguelíneas en la OSHWDem" />
@@ -87,14 +93,26 @@
     <div class="proto-bg cover"></div>
 </section>
 <section class="media content">
+    <a name="contact"></a>
+    <h1 class="section-title">Contacto</h1>
     <div class="wrapper">
-       <div class="twitter">
-           <a class="twitter-timeline" height="350" width="400" href="https://twitter.com/Brico_Labs" data-widget-id="589771298265554944">Tweets por el @Brico_Labs.</a>
-           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-       </div>
-       <div class="facebook" style="background:transparent">
-            <div class="fb-page" data-href="https://www.facebook.com/bricolabs" data-width="450" data-height="354" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/bricolabs"><a href="https://www.facebook.com/bricolabs">BricoLabs</a></blockquote></div></div>
-       </div>
+        <div class="section-desc">
+            <p>Nos reunimos todos los viernes en la Domus de A Coruña. Todos los meses hacemos una sesión de puertas abiertas, si quieres hacernos una visita debes contactar con nostros con antelación. Puedes hacerlo a través de estas vías:</p><br />
+            <table>
+                <tr>
+                    <td class="td-left">Correo electrónico: </td>
+                    <td class="td-right"><a href="mailto:contacto@bricolabs.cc" > bricolabs@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td class="td-left">Twitter: </td>
+                    <td class="td-right"><a href="https://twitter.com/brico_labs" target="_blank"> @brico_labs</a></td>
+                </tr>
+                <tr>
+                    <td class="td-left">Facebook: </td>
+                    <td class="td-right"><a href="https://www.facebook.com/bricolabs" target="_blank"> bricolabs</a></td>
+                </tr>
+            </table>
+        </div> 
     </div>
 </section>
 <footer>
