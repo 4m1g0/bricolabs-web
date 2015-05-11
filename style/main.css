@@ -63,6 +63,7 @@ header {
     top: 0px;
     width: 100%;
     z-index: 900;
+    font-weight: bold;
 }
 
 .menu-bg {
