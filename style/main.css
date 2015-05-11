@@ -139,25 +139,13 @@ header {
     position: relative;
 }
 
-.twitter {
-    display: table-cell;
-}
-
 .table {
     display: table;
 }
 
-.facebook {
-    background-color: #00f;
-    height: 350px;
-    width: 350px;
-    max-width: 100%;
-    display: table-cell;
-    vertical-align: middle;
-}
-
 .content {
     background-color: #645B5B;
+    
     width:100%;
     position: relative;
     z-index: 100;
@@ -277,19 +265,6 @@ footer img {
     width: 35px;
     padding: 5px;
     display: inline;
-}
-
-.td-left {
-    text-align: right;
-}
-
-.td-right {
-    text-align: left;
-    padding-left: 10px;
-}
-
-table {
-    margin: 0 auto;
 }
 
 @media screen and (max-width: 900px) {
