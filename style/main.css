@@ -137,6 +137,7 @@ header {
 
 .video {
     position: relative;
+    overflow: hidden;
 }
 
 .table {
