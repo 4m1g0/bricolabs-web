@@ -21,19 +21,19 @@ $(function(){
         return false;
        });
        
-    $("#who").click(function(e){
+    $("#menu-who").click(function(e){
         e.preventDefault();
-        $('html,body').animate({scrollTop: $(".description").offset().top-69}, 500);
+        $('html,body').animate({scrollTop: $("#who").offset().top-69}, 500);
     });
-    $("#proyects").click(function(e){
+    $("#menu-proyects").click(function(e){
         e.preventDefault();
-        $('html,body').animate({scrollTop: $(".proyects").offset().top-69}, 500);
+        $('html,body').animate({scrollTop: $("#proyects").offset().top-69}, 500);
     });
-    $("#contact").click(function(e){
+    $("#menu-contact").click(function(e){
         e.preventDefault();
-        $('html,body').animate({scrollTop: $(".media").offset().top-69}, 500);
+        $('html,body').animate({scrollTop: $("#contact").offset().top-69}, 500);
     });
-    $("#init").click(function(e){
+    $("#menu-init").click(function(e){
         e.preventDefault();
         $('html,body').animate({scrollTop: 0}, 500);
     });
@@ -42,7 +42,7 @@ $(function(){
 
 function scroll() {
     var scrollTop = $(window).scrollTop();
-    console.log("scroll: " + scrollTop);
+    //console.log("scroll: " + scrollTop);
     var scrollMod = scrollTop/7;
               
     if (scrollTop > introHeight) {
@@ -74,7 +74,7 @@ function scroll() {
 }
 
 function resize() {
-    console.log("resize");
+    //console.log("resize");
     if (!video && $(window).width() > 900){
         video = $('<video id="video-bricolabs" autoplay loop preload="auto"><source src="images/bricolabs_video.mp4" type="video/mp4"><source src="images/bricolabs_video.ogv" type="video/ogg"></video>').appendTo($(".video"));
     }
@@ -118,7 +118,7 @@ function showImage() {
 }
 
 function closeImage() {
-    console.log("closeImage");
+    //console.log("closeImage");
     var fullscreen = $(".image-fullscreen");
     fullscreen.children("img").remove();
     fullscreen.hide();
